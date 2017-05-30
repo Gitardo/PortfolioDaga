@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" >
+	<meta http-equiv="X-UA-Compatilble" content="IE=edge,chrome=1" >
+	
+	<title>Portfolio - Dagmara L.</title>
+	
+	<meta name="description" content="Pierwsze portfolio początkującej programistki." >
+	<meta name="keywords" content="portfolio, html, html5, css, javascript, programista" >
+	
+	<link rel="stylesheet" href="style.css" type="text/css" >
+	<link rel="stylesheet" href="css/fontello.css" type="text/css" >
+
+</head>
+
+<body>
+	
+	<header id="foto">
+		<div id="slide">
+			<img src="nazywamsie.png" alt="Nazywam się Dagmara" id="nazywam_sie">
+			<img src="ichce.png" alt="I chcę pracować w Inwedo" id="inwedo">
+		</div> 
+	</header>
+
+	
+	<nav class="nav">
+		<ul>
+			<li><a href="index.html"><i class="icon-user-woman"></i><br>O mnie</a></li>
+			<li><a href="index_dlaczego_programuje.html"><i class="icon-code"></i><br>Dlaczego programuję?</a></li>
+			<li><a href="index_co_umiem.html"><i class="icon-check"></i><br>Co już umiem?</a></li>
+			<li><a href="index_moje_plany.html"><i class="icon-rocket"></i><br>Moje plany</a></li>
+		</ul>
+	</nav>
+
+	
+	<main id="container">
+		
+		<section id="content">
+			<div><img src="foto.jpg" alt="zdjęcie profilowe" id="moje-foto"></div>
+			<h1 id="article-title">O mnie</h1>
+			<article id="main-content">
+			
+				<p>Jestem absolwentką Uniwersytetu Łódzkiego. Studiowałam dwie filologie i zrobiłam dwie specjalizacje - nauczycielską i tłumaczeniową. Od ponad 7 lat nauczam języka hiszpańskiego i włoskiego. Oprócz tego mam wiele pasji, które realizuję w wolnym czasie. Przez wiele lat tańczyłam hip-hop, nauczyłam się wyrabiać naturalne mydła z oleji, potem zajęłam się tworzeniem autorskiej biżuterii. By zaistnieć na rynku stworzyłam własny sklep internetowy oparty na PrestaShop. Nie miałam wtedy jeszcze pojęcia o programowaniu a tworzenie sklepu, nawet używając systemu CMS przysporzyło mi wielu problemów i jednocześnie... radości! To była moja pirwsze styczność ze światem IT. Zarządzałam moim sklepem oraz Funpage'm na Facebook'u, tworzyłam biżuterię, stałam się fotografem i grafikiem w jednym i bardzo dobrze odnajdywałam się w tej roli.</p>
+				
+				<p>Próbowałam w swoim życiu jeszcze wielu innych rzeczy. Te opisane powyżej pozostaną moimi pasjami na zawsze, jednak dopiero w tym roku doznałam olśnienia, które mam nadzieję, odmieni moje życie. Zaczęłam uczyć się programowania. Wreszcze odnalazłam dziedzinę, która łączy wszystkie moje zainteresowania i predyspozycje, jednocześnie dając nieograniczone możliwości rozwoju i wykorzystania mojej kreatywności.</p>
+				
+				<q id="quote"><em>Software is a great combination between artistry and engineering <br>- Bill Gates</em></q>
+				
+			</article>
+		</section>
+	</main>
+	
+	<section id="tel">Skontaktuj sie ze mną!</section>
+	
+	<section id="sec-contact">
+		<input id="contact" type="button" onclick='document.getElementById("sec-contact").innerHTML = "660 046 696 | vanila.dl@gmail.com"' value="Kontakt">
+		</input>
+	</section>
+	
+	
+	<footer id="footer">Dagmara Lewandowska - początkująca programistka front-end</footer>
+
+	
+	<script src="jquery-3.2.1.min.js"></script>
+	<script>
+
+	$(document).ready(function() {
+	var NavY = $('.nav').offset().top;
+	 
+	var stickyNav = function(){
+	var ScrollY = $(window).scrollTop();
+		  
+	if (ScrollY > NavY) { 
+		$('.nav').addClass('sticky');
+	} else {
+		$('.nav').removeClass('sticky'); 
+	}
+	};
+	 
+	stickyNav();
+	 
+	$(window).scroll(function() {
+		stickyNav();
+	});
+	});
+	
+	</script>
+
+	
+</body>
+
+</html>

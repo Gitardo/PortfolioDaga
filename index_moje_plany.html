@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" >
+	<meta http-equiv="X-UA-Compatilble" content="IE=edge,chrome=1" >
+	
+	<title>Portfolio - Dagmara L.</title>
+	
+	<meta name="description" content="Pierwsze portfolio początkującej programistki." >
+	<meta name="keywords" content="portfolio, html, html5, css, javascript, programista" >
+	
+	<link rel="stylesheet" href="style.css" type="text/css" >
+	<link rel="stylesheet" href="css/fontello.css" type="text/css" >
+
+</head>
+
+<body>
+	
+	<header id="foto">
+		<div id="slide">
+			<img src="nazywamsie.png" alt="Nazywam się Dagmara" id="nazywam_sie">
+			<img src="ichce.png" alt="I chcę pracować w Inwedo" id="inwedo">
+		</div> 
+	</header>
+
+	
+	<nav class="nav">
+		<ul>
+			<li><a href="index.html"><i class="icon-user-woman"></i><br>O mnie</a></li>
+			<li><a href="index_dlaczego_programuje.html"><i class="icon-code"></i><br>Dlaczego programuję?</a></li>
+			<li><a href="index_co_umiem.html"><i class="icon-check"></i><br>Co już umiem?</a></li>
+			<li><a href="index_moje_plany.html"><i class="icon-rocket"></i><br>Moje plany</a></li>
+		</ul>
+	</nav>
+
+	
+	<main id="container">
+		
+		<section id="content">
+			<div><img src="frontend_plany.jpg" alt="Plan rozwoju" id="frontend_plany"></div>
+			<h1 id="article-title">Moje plany</h1>
+			<article id="main-content">
+			
+				<p>Obecnie moim największym marzeniem i celem jest zdobycie wszelkich potrzebnych umiejętności by rozpocząć pracę jako front-end developer.</p>
+				
+				<p>Ucze się dość intensywnie i jestem samodzielna. Jestem pewna, że do końca roku poznam wiekszość frameworków i narzędzi potrzebnych do tworzenia stron internetowych. Mimo tego, by ugruntować wiedzę i nauczyć się znacznie więcej, zainteresowałam się kursem typu bootcamp. Niestety  na obecną chwilę fundusze nie pozwalają mi wziąć w nim udziału. Mimo tego będę próbowała dostać się na taki kurs na jesieni tego roku.</p>
+				
+				<p>By jeszcze bardziej przyspieszyć postępy w nauce, chciałabym podjąc pracę jak junior developer bądź dostać się na staż programistyczny.</p>
+				
+				<p>O firmie Inwedo dowiedziałam się z inernetu. Inspiruje mnie fakt, że firma powstała w przysłowiowym garażu a obecnie jest jedną z wiekszych na terenie Łodzi, która wprowadziła wiele nowoczesnych rozwiązań i produktów. Inwedo wydaje mi się być idealnym miejscem dla mnie - osoby bardzo kreatywnej i dokładnej, z mnóstwem pomysłów na minutę, która w przyszłości pomoże tworzyć nowe rozwiązania i innowacyje technologie.</p>
+				
+				<p>Dlatego też, specjalnie na potrzeby tej rekrutacji, stworzyłam tę stronę internetową, która w pewnym stopniu łączy i pokazuje moje dotychczasowe umiejetności. Na pewno bedę nieustannie nad nią pracować i ją rozwijać by w niedalekiej przyszłości stała się moją idealną wizytówką.</p>
+				
+				<p>Mam nadzieję, że zainteresowałam Państwa moją działalnością i już wkrótce spotkamy się na rozmowie.</p>
+				
+				<q id="quote"><em>Software is a great combination between artistry and engineering <br>- Bill Gates</em></q>
+				
+			</article>
+		</section>
+	</main>
+	
+	<section id="tel">Skontaktuj sie ze mną!</section>
+	
+	<section id="sec-contact">
+		<input id="contact" type="button" onclick='document.getElementById("sec-contact").innerHTML = "660 046 696 | vanila.dl@gmail.com"' value="Kontakt">
+		</input>
+	</section>
+	
+	
+	<footer id="footer">Dagmara Lewandowska - początkująca programistka front-end</footer>
+
+	
+	<script src="jquery-3.2.1.min.js"></script>
+	<script>
+
+	$(document).ready(function() {
+	var NavY = $('.nav').offset().top;
+	 
+	var stickyNav = function(){
+	var ScrollY = $(window).scrollTop();
+		  
+	if (ScrollY > NavY) { 
+		$('.nav').addClass('sticky');
+	} else {
+		$('.nav').removeClass('sticky'); 
+	}
+	};
+	 
+	stickyNav();
+	 
+	$(window).scroll(function() {
+		stickyNav();
+	});
+	});
+	
+	</script>
+
+	
+</body>
+
+</html>
